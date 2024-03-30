@@ -13,7 +13,7 @@ const ProductList = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const url = selectedCategory!='' && selectedCompany!=''? `http://localhost:3000/companies/categories/${selectedCategory}/products`:"http://localhost:3000/getAll";
+      
       try {
         const response = await axios.get("http://localhost:3000/companies/categories/products",{
           params:{sortBy, companyname:selectedCompany, categoryname:selectedCategory, topN}
